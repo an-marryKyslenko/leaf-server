@@ -5,15 +5,13 @@ import cors from 'cors';
 import helmet from 'helmet';
 import xss from 'xss-clean';
 import rateLimiter from 'express-rate-limit';
-//api routers
 import ProductRouter from './routers/products.js';
 import AuthRouter from './routers/auth.js';
-//meddeleware
 import errorHandlerMiddleware from './middeleware/error-handler.js';
 import notFound from './middeleware/notFound.js';
 
 import connectDB from './db/connect.js'
-const app = express()
+export const app = express()
 
 app.set('trust proxy', 1);
 app.use(
@@ -33,7 +31,7 @@ app.use(xss());
 app.get('/', (req, res) => {
 	res.send("<h1>Store Api</h1><a href='/api/v1/products'>products</a>")
 })
-
+app.use(express.static("pablic"))
 app.use("/api/v1/products", ProductRouter)
 app.use("/api/v1/auth", AuthRouter)
 
