@@ -2,7 +2,7 @@ import 'dotenv/config';
 import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
-import helmet from 'helmet';
+import helmet from 'helmet/index.cjs';
 import xss from 'xss-clean';
 import rateLimiter from 'express-rate-limit';
 import ProductRouter from './routers/products.js';
