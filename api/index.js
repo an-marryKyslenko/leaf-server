@@ -1,4 +1,4 @@
-import { start, app } from "../app";
+import { start } from "../app";
 
 
-export { start, app }
+export { start }
