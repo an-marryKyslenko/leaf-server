@@ -1,4 +1,4 @@
-import { start } from "../app";
+import app from '../app.js'
 
 
-export { start }
+export default app

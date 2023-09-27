@@ -14,7 +14,7 @@ import connectDB from './db/connect.js'
 
 const port = process.env.PORT || 5000;
 
-export const start = async () => {
+
 	const app = express()
 
 	app.set('trust proxy', 1);
@@ -42,7 +42,7 @@ export const start = async () => {
 	app.use(notFound)
 	app.use(errorHandlerMiddleware)
 
-
+export const start = async () => {
 	try {
 		await connectDB(process.env.MONGO_DB)
 		app.listen(port, () => console.log(
@@ -52,4 +52,5 @@ export const start = async () => {
 		console.log(error);
 	}
 }
+export default app
 start()
