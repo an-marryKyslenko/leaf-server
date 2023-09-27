@@ -6,8 +6,8 @@ import helmet from 'helmet';
 import xss from 'xss-clean';
 import rateLimiter from 'express-rate-limit';
 //api routers
-import ProductRouter from './api/products.js';
-import AuthRouter from './api/auth.js';
+import ProductRouter from './routers/products.js';
+import AuthRouter from './routers/auth.js';
 //meddeleware
 import errorHandlerMiddleware from './middeleware/error-handler.js';
 import notFound from './middeleware/notFound.js';
