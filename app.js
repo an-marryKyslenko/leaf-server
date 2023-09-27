@@ -4,7 +4,7 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 import helmet from 'helmet/index.cjs';
 import xss from 'xss-clean';
-import rateLimiter from 'express-rate-limit';
+import rateLimiter from 'express-rate-limit/dist/index.cjs';
 import ProductRouter from './routers/products.js';
 import AuthRouter from './routers/auth.js';
 import errorHandlerMiddleware from './middeleware/error-handler.js';
